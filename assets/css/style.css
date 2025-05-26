@@ -1,138 +1,44 @@
-/* Sarka Forex custom overrides for Bootstrap - minimalist, pro, mobile-first */
+/* assets/css/style.css */
 
-/* General tweaks */
-body {
-  font-family: 'Segoe UI', 'Arial', sans-serif;
-  font-size: 1.09em;
-  background: #f6f8fb;
+/* Make dark mode look nice */
+[data-bs-theme="dark"] {
+  background-color: #181d23 !important;
+  color: #e3e9ee !important;
 }
-h1, h2, h3, h4, h5, h6 {
-  color: #0455b7;
-  font-weight: 700;
+[data-bs-theme="dark"] .bg-light {
+  background-color: #212529 !important;
+  color: #e3e9ee !important;
 }
-a { text-decoration: none; }
-a:hover { text-decoration: underline; }
-.bg-success { background-color: #16c782!important; }
-.text-success { color: #16c782!important; }
-
-.hero-img {
-  box-shadow: 0 8px 36px rgba(22,199,130,0.12);
-  border-radius: 1.5rem;
-}
-
-.badge.bg-success, .badge.bg-primary, .badge.bg-warning, .badge.bg-info {
-  font-size: 1em;
-  padding: 0.65em 1.1em;
-  border-radius: 1.2em;
-  margin-right: 0.6em;
-}
-
-.card {
-  border-radius: 1.2rem;
-}
-.card .card-title { font-size: 1.13em; }
-.card .btn { border-radius: 1.4em; }
-
-footer {
-  font-size: 1.01em;
-}
-footer .fw-bold { color: #16c782; }
-footer .text-light { transition: color 0.15s; }
-footer .text-light:hover { color: #16c782!important; }
-
-.newsletter-popup {
-  display: none;
-  position: fixed;
-  left: 0; right: 0; top: 0; bottom: 0;
-  background: rgba(34,41,55,0.11);
-  z-index: 1080;
-  justify-content: center;
-  align-items: center;
-}
-.newsletter-popup.show {
-  display: flex;
-}
-.popup-content {
-  max-width: 340px;
-  width: 98vw;
-  padding: 2.2em 1.2em 1.4em 1.2em;
-}
-
-#darkSwitch + label i { font-size: 1.18em; color: #0455b7; cursor: pointer;}
-.form-check-input:checked { background-color: #16c782; border-color: #16c782;}
-.form-check-input { cursor:pointer; }
-
-#lang-switch .btn {
-  font-size: 0.97em;
-  border-radius: 1.5em;
-  padding: 0.18em 1em;
-}
-#lang-switch .btn.active, #lang-switch .btn:focus, #lang-switch .btn:hover {
-  background: #16c782!important;
-  color: #fff!important;
-  border-color: #16c782!important;
-}
-
-.counter {
-  font-size: 2.1em;
-  font-weight: 800;
-  letter-spacing: -1px;
-}
-@media (max-width:900px){
-  .container{max-width:98vw;}
-  .display-5{font-size:2.1em;}
-}
-@media (max-width:600px){
-  .display-5{font-size:1.38em;}
-  h1,h2{font-size:1.06em;}
-  .hero-img{max-width:85vw;}
-  .card{margin-bottom:1em;}
-  .navbar-brand img{height:35px;}
-}
-@media (max-width:450px){
-  .container{padding:0 4vw;}
-  .card{font-size:0.95em;}
-}
-
-/* Dark mode fixes */
-[data-bs-theme="dark"] body, [data-bs-theme="dark"] {
-  background: #181a1c!important;
-  color: #f6f8fb!important;
-}
-[data-bs-theme="dark"] h1, 
-[data-bs-theme="dark"] h2, 
-[data-bs-theme="dark"] h3, 
-[data-bs-theme="dark"] h4, 
-[data-bs-theme="dark"] h5, 
-[data-bs-theme="dark"] h6 {
-  color: #16c782!important;
+[data-bs-theme="dark"] .bg-white {
+  background-color: #181d23 !important;
+  color: #e3e9ee !important;
 }
 [data-bs-theme="dark"] .navbar, 
-[data-bs-theme="dark"] .bg-white, 
-[data-bs-theme="dark"] .card,
-[data-bs-theme="dark"] .bg-light {
-  background: #23292f!important;
-  color: #f6f8fb!important;
+[data-bs-theme="dark"] .footer, 
+[data-bs-theme="dark"] .card {
+  background-color: #212529 !important;
+  color: #e3e9ee !important;
 }
-[data-bs-theme="dark"] .text-dark { color: #fff!important; }
-[data-bs-theme="dark"] .btn.btn-outline-primary, 
-[data-bs-theme="dark"] .btn.btn-outline-secondary,
-[data-bs-theme="dark"] .btn.btn-outline-success,
-[data-bs-theme="dark"] .btn.btn-outline-warning {
-  color: #fff!important;
-  border-color: #16c782;
+[data-bs-theme="dark"] .card {
+  border-color: #333 !important;
 }
-[data-bs-theme="dark"] .btn.btn-outline-primary:hover,
-[data-bs-theme="dark"] .btn.btn-outline-success:hover {
-  background: #16c782!important;
-  border-color: #16c782!important;
+
+a {
+  text-decoration: none;
+  transition: color 0.2s;
 }
-[data-bs-theme="dark"] .form-control {
-  background: #1a1d20!important;
-  color: #fff!important;
+
+a:hover {
+  color: #16c782 !important;
 }
-[data-bs-theme="dark"] .form-control:focus {
-  background: #23292f!important;
-  color: #fff!important;
-  border-color: #16c782;
+
+.btn-success, .bg-success {
+  background-color: #16c782 !important;
+  border: none;
+}
+
+@media (max-width: 991px) {
+  .navbar .navbar-collapse {
+    background: #fff;
+  }
 }
