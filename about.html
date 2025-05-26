@@ -1,90 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About – Sarka Forex</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="icon" type="image/png" href="assets/images/logo-placeholder.png">
-    <!-- Font Awesome for social icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About | Sarka Forex – Africa’s Leading AI Halal Trading Platform</title>
+  <meta name="description" content="The Sarka Forex story – built on Islamic values, African vision, and AI automation. Meet the team, our mission, and why we’re different.">
+  <link rel="icon" href="data:,">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
-    <header>
-        <nav class="container">
-            <img src="assets/images/logo-placeholder.png" alt="Sarka Forex Logo" class="logo">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" class="active">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="signals.html">Signals</a></li>
-                <li><a href="ai-tools.html">AI Tools</a></li>
-                <li><a href="testimonials.html">Testimonials</a></li>
-                <li><a href="faqs.html">FAQs</a></li>
-                <li><a href="community.html">Community</a></li>
-                <li><a href="contact.html" class="cta">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<body data-bs-theme="light">
 
-    <section class="container" style="padding-top: 50px; padding-bottom: 50px;">
-        <h1>About Sarka Forex</h1>
-        <p style="max-width:700px;font-size:1.2em;">
-            <b>Sarka Forex</b> is Africa’s #1 AI-powered trading company, built to empower a new generation of traders and investors.  
-            We combine world-class artificial intelligence, automation, and a strong community to help our users achieve consistent results and financial freedom.
-        </p>
-        <div style="max-width:700px;font-size:1.12em;margin-top:30px;">
-            <h3>Our Mission</h3>
-            <p>
-                To make advanced trading, financial knowledge, and wealth-building tools accessible to every African, regardless of background.
-            </p>
-            <h3>Our Vision</h3>
-            <p>
-                Building Africa’s most trusted, impactful, and automated trading platform — 
-                where every member can grow, earn, and thrive with the support of cutting-edge technology and a powerful community.
-            </p>
-            <h3>Why "Ghost Mode"?</h3>
-            <p>
-                Sarka Forex is designed as a community movement and platform—not about any single founder.  
-                Our focus is on scalable technology, AI, and user results. We remain in “ghost mode” so all value is for the people.
-            </p>
-        </div>
-        <div style="margin-top:40px;">
-            <a href="community.html" class="btn-main">Join Our Community</a>
-        </div>
-    </section>
+  <!-- Top Bar -->
+  <div class="bg-light py-1 border-bottom small">
+    <div class="container d-flex justify-content-end align-items-center gap-3">
+      <div id="lang-switch" class="me-2">
+        <button class="btn btn-sm btn-outline-success me-1" onclick="setLang('en')">EN</button>
+        <button class="btn btn-sm btn-outline-success me-1" onclick="setLang('ha')">HA</button>
+        <button class="btn btn-sm btn-outline-success" onclick="setLang('ar')">AR</button>
+      </div>
+      <div id="dark-toggle" class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" id="darkSwitch" onchange="toggleDark()">
+        <label class="form-check-label" for="darkSwitch"><i class="fa fa-moon"></i></label>
+      </div>
+    </div>
+  </div>
 
-    <footer>
-        <div class="container footer-grid">
-            <div>
-                <img src="assets/images/logo-placeholder.png" class="footer-logo" alt="Sarka Forex Logo">
-                <p>Sarka Forex – Scaling Africa with AI. All rights reserved © 2025.</p>
-            </div>
-            <div>
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="signals.html">Signals</a></li>
-                    <li><a href="ai-tools.html">AI Tools</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4>Connect</h4>
-                <div class="socials">
-                    <a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
-                    <a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://tiktok.com/" target="_blank"><i class="fab fa-tiktok"></i></a>
-                    <a href="https://youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
-                </div>
-                <p>
-                    <a href="mailto:support@sarkafx.com">support@sarkafx.com</a><br>
-                    <a href="mailto:info@sarkafx.com">info@sarkafx.com</a>
-                </p>
-            </div>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <span class="fs-3" style="color:#16c782;"><i class="fa-solid fa-chart-line"></i></span>
+        <span class="fw-bold fs-4" style="color:#0455b7; letter-spacing:-1px;">
+          Sarka <span style="color:#16c782;">Forex</span>
+        </span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="#">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="signals.html">Signals</a></li>
+          <li class="nav-item"><a class="nav-link" href="ai-tools.html">AI Tools</a></li>
+          <li class="nav-item"><a class="nav-link" href="testimonials.html">Testimonials</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="faqs.html">FAQs</a></li>
+          <li class="nav-item"><a class="nav-link" href="community.html">Community</a></li>
+          <li class="nav-item"><a class="nav-link btn btn-success text-white px-3 ms-lg-2" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- About Hero -->
+  <section class="bg-light py-5">
+    <div class="container">
+      <div class="row align-items-center flex-column-reverse flex-lg-row">
+        <div class="col-lg-6 text-center text-lg-start mt-4 mt-lg-0">
+          <h1 class="display-5 fw-bold mb-3">Our Story: Sarka Forex</h1>
+          <p class="lead mb-3">
+            Sarka Forex was founded with one vision: <b>to make halal, AI-powered trading accessible and ethical for everyone in Africa and beyond.</b> Inspired by our Islamic roots and African heritage, we’re building not just a platform, but a movement.
+          </p>
+          <ul class="list-unstyled fs-5 mb-3">
+            <li><i class="fa fa-check-circle text-success me-2"></i>True to Islam: 100% halal, riba-free, and honest</li>
+            <li><i class="fa fa-check-circle text-success me-2"></i>Driven by AI: Modern automation, real value</li>
+            <li><i class="fa fa-check-circle text-success me-2"></i>For the Community: Open to all, transparent & scalable</li>
+          </ul>
+          <div class="mt-3">
+            <a href="https://wa.me/2347082713306?text=Assalamu%20alaikum%2C%20I%20want%20to%20learn%20about%20Sarka%20Forex" target="_blank" class="btn btn-success px-4 py-2 fw-bold">
+              <i class="fab fa-whatsapp me-2"></i>Chat with Sarka Team
+            </a>
+          </div>
         </div>
-    </footer>
+        <div class="col-lg-6 text-center">
+          <div style="font-size:6em;color:#0455b7;"><i class="fa-solid fa-people-group"></i></div>
+          <div class="text-muted fw-bold mt-2">African, Muslim, Global</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission, Vision, Values -->
+  <section class="bg-white py-5">
+    <div class="container">
+      <div class="row g-4 text-center">
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm h-100">
+            <div class="card-body">
+              <div class="fs-1 mb-3 text-success"><i class="fa-solid fa-bullseye"></i></div>
+              <h5 class="fw-bold">Our Mission</h5>
+              <p class="mb-0">Empower millions across Africa & the Muslim world to build wealth ethically through AI, education, and community—without compromise.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm h-100">
+            <div class="card-body">
+              <div class="fs-1 mb-3 text-primary"><i class="fa-solid fa-lightbulb"></i></div>
+              <h5 class="fw-bold">Our Vision</h5>
+              <p class="mb-0">Be the #1 halal AI trading brand globally—innovative, trusted, and a beacon for ethical finance in Africa and beyond.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm h-100">
+            <div class="card-body">
+              <div class="fs-1 mb-3 text-warning"><i class="fa-solid fa-hands-holding-heart"></i></div>
+              <h5 class="fw-bold">Our Values</h5>
+              <p class="mb-0">Integrity, transparency, community, Islamic principles, and a drive to serve everyone, Muslim or not.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Sarka? -->
+  <section class="bg-light py-5">
+    <div class="container">
+      <h2 class="fw-bold mb-4 text-center">Why Choose Sarka Forex?</h2>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="card border-0 shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="fw-bold mb-2"><i class="fa fa-star text-success me-2"></i>Halal First, Always</h5>
+              <p>No riba, no hidden fees, no manipulation. Every trade, tool, and signal is checked for Sharia compliance and ethics—guaranteed.</p>
+              <h5 class="fw-bold mb-2"><i class="fa fa-bolt text-primary me-2"></i>AI at Your Service</h5>
+              <p>World-class AI tools and automation, built in Africa for Africa—tested, proven, and always improving with real user feedback.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card border-0 shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="fw-bold mb-2"><i class="fa fa-users text-info me-2"></i>Community Driven</h5>
+              <p>From WhatsApp onboarding to 24/7 support, we’re with you. We grow together, celebrate together, and build legacies together.</p>
+              <h5 class="fw-bold mb-2"><i class="fa fa-globe text-warning me-2"></i>Built to Scale</h5>
+              <p>Sarka isn’t just a platform—it’s a global movement for financial freedom, starting from Africa but open to the world.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team (optional - add real team/photos later) -->
+  <section class="bg-white py-5">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-4">Meet the Founder</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-5">
+          <div class="card border-0 shadow-sm">
+            <div class="card-body">
+              <div class="fs-1 mb-3 text-success"><i class="fa-solid fa-user-tie"></i></div>
+              <h5 class="fw-bold mb-2">Sulaiman Ishiyaku</h5>
+              <div class="mb-2">Founder & Visionary</div>
+              <p class="mb-0">African, Muslim, entrepreneur, and AI advocate—leading the new wave of halal, ethical finance for Africa’s future. “Our legacy is to empower, not just earn.”</p>
+              <a href="https://wa.me/2347082713306?text=Salam%2C%20I%20want%20to%20connect%20with%20Sulaiman%20from%20Sarka%20Forex" class="btn btn-outline-success mt-3"><i class="fab fa-whatsapp me-2"></i>WhatsApp Me</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-4 text-muted">Want to join the team? <a href="contact.html">Contact us</a></div>
+    </div>
+  </section>
+
+  <!-- Footer (same as homepage) -->
+  <footer class="bg-dark text-light pt-5 pb-3 mt-5">
+    <div class="container">
+      <div class="row align-items-center mb-4">
+        <div class="col-md-5 text-center text-md-start mb-3 mb-md-0">
+          <span class="fs-2" style="color:#16c782;"><i class="fa-solid fa-chart-line"></i></span>
+          <div class="fw-bold fs-5" style="color:#16c782;">Sarka Forex</div>
+          <small class="d-block mt-2">Proudly driven by Islamic values—fairness, trust, and halal opportunities for all.<br>Scaling Africa, open to everyone.</small>
+        </div>
+        <div class="col-md-4 text-center mb-3 mb-md-0">
+          <div class="mb-2">Follow us:</div>
+          <a href="https://www.instagram.com/sarka_fx?igsh=amx0aTVzejVucDJz&utm_source=qr" class="text-light fs-4 me-2" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/share/1EjUY3HbjZ/?mibextid=wwXIfr" class="text-light fs-4 me-2" target="_blank"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.tiktok.com/@sarkaforex?_t=ZM-8wfVvH62rY6&_r=1" class="text-light fs-4 me-2" target="_blank"><i class="fab fa-tiktok"></i></a>
+          <a href="https://youtube.com/@sarka_fx?si=2kUioQjjykZ23oec" class="text-light fs-4" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div class="col-md-3 text-center text-md-end">
+          <div class="mb-2">Contact:</div>
+          <a href="mailto:info@sarkafx.com" class="text-light d-block mb-1"><i class="fa fa-envelope me-2"></i>info@sarkafx.com</a>
+          <a href="tel:+2347082713306" class="text-light d-block"><i class="fa fa-phone me-2"></i>+234 708 271 3306</a>
+        </div>
+      </div>
+      <hr class="bg-secondary mb-3">
+      <div class="row">
+        <div class="col-12 text-center small">
+          &copy; 2025 Sarka Forex. All rights reserved. | Designed with <i class="fa fa-heart text-danger"></i> for Africa & the Muslim world.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/scripts.js"></script>
 </body>
 </html>
