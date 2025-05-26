@@ -1,149 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact – Sarka Forex</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="icon" type="image/png" href="assets/images/logo-placeholder.png">
-    <!-- Font Awesome for social icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        .contact-form {
-            background: #fff;
-            border-radius: 18px;
-            max-width: 500px;
-            margin: 28px auto 0 auto;
-            box-shadow: 0 4px 32px rgba(4, 85, 183, 0.07);
-            padding: 34px 26px 26px 26px;
-        }
-        .contact-form label { display: block; margin-bottom: 6px; font-weight: 500; }
-        .contact-form input, .contact-form textarea {
-            width: 100%;
-            padding: 10px 14px;
-            border-radius: 7px;
-            border: 1px solid #e0e5ef;
-            margin-bottom: 16px;
-            font-size: 1em;
-            font-family: inherit;
-            background: #f7fbff;
-        }
-        .contact-form textarea { min-height: 90px; resize: vertical; }
-        .contact-form button {
-            background: #16c782;
-            color: #fff;
-            border: none;
-            border-radius: 32px;
-            padding: 12px 36px;
-            font-size: 1.08em;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background 0.2s;
-        }
-        .contact-form button:hover {
-            background: #0455b7;
-        }
-        .contact-details {
-            text-align: center;
-            margin-top: 32px;
-            font-size: 1.09em;
-            color: #181a1c;
-        }
-        .contact-details i { margin-right: 7px; color: #0455b7;}
-        .contact-details a { color: #0455b7; font-weight: 600;}
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | Sarka Forex – Get in Touch, 24/7</title>
+  <meta name="description" content="Contact Sarka Forex team: WhatsApp, Telegram, email, or phone. Fastest AI support for trading, onboarding, and partnership.">
+  <link rel="icon" href="data:,">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
-    <header>
-        <nav class="container">
-            <img src="assets/images/logo-placeholder.png" alt="Sarka Forex Logo" class="logo">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="signals.html">Signals</a></li>
-                <li><a href="ai-tools.html">AI Tools</a></li>
-                <li><a href="testimonials.html">Testimonials</a></li>
-                <li><a href="faqs.html">FAQs</a></li>
-                <li><a href="community.html">Community</a></li>
-                <li><a href="contact.html" class="cta active">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<body data-bs-theme="light">
 
-    <section class="container" style="padding-top:50px; padding-bottom:50px;">
-        <h1>Contact Sarka Forex</h1>
-        <p style="max-width:600px;font-size:1.14em;margin-bottom:25px;">
-            Questions, partnership or ready to get started?  
-            Reach us via the form below or through any channel.  
-            Our team replies within minutes, 24/7.
-        </p>
-        <form class="contact-form" onsubmit="event.preventDefault();alert('Message sent! We will contact you soon, in sha Allah.');this.reset();">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required autocomplete="name">
-            
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required autocomplete="email">
-            
-            <label for="message">Message</label>
-            <textarea id="message" name="message" required></textarea>
-            
-            <button type="submit"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
-        </form>
-        <div class="contact-details">
-            <p>
-                <i class="fa-solid fa-envelope"></i> 
-                <a href="mailto:support@sarkafx.com">support@sarkafx.com</a> &nbsp; | &nbsp;
-                <a href="mailto:info@sarkafx.com">info@sarkafx.com</a>
-            </p>
-            <p>
-                <i class="fa-brands fa-whatsapp"></i>
-                <a href="https://wa.me/2347082713306?text=Hello%20Sarka%20Forex!" target="_blank">Chat on WhatsApp</a>
-            </p>
-            <p>
-                <i class="fa-solid fa-phone"></i>
-                <a href="tel:+2347082713306">+234 708 271 3306</a>
-            </p>
-            <div style="margin-top:12px;">
-                <a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook fa-lg"></i></a>
-                <a href="https://instagram.com/" target="_blank" style="margin-left:10px;"><i class="fab fa-instagram fa-lg"></i></a>
-                <a href="https://tiktok.com/" target="_blank" style="margin-left:10px;"><i class="fab fa-tiktok fa-lg"></i></a>
-                <a href="https://youtube.com/" target="_blank" style="margin-left:10px;"><i class="fab fa-youtube fa-lg"></i></a>
-            </div>
-        </div>
-    </section>
+  <!-- Top Bar -->
+  <div class="bg-light py-1 border-bottom small">
+    <div class="container d-flex justify-content-end align-items-center gap-3">
+      <div id="lang-switch" class="me-2">
+        <button class="btn btn-sm btn-outline-success me-1" onclick="setLang('en')">EN</button>
+        <button class="btn btn-sm btn-outline-success me-1" onclick="setLang('ha')">HA</button>
+        <button class="btn btn-sm btn-outline-success" onclick="setLang('ar')">AR</button>
+      </div>
+      <div id="dark-toggle" class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" id="darkSwitch" onchange="toggleDark()">
+        <label class="form-check-label" for="darkSwitch"><i class="fa fa-moon"></i></label>
+      </div>
+    </div>
+  </div>
 
-    <footer>
-        <div class="container footer-grid">
-            <div>
-                <img src="assets/images/logo-placeholder.png" class="footer-logo" alt="Sarka Forex Logo">
-                <p>Sarka Forex – Scaling Africa with AI. All rights reserved © 2025.</p>
-            </div>
-            <div>
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="signals.html">Signals</a></li>
-                    <li><a href="ai-tools.html">AI Tools</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4>Connect</h4>
-                <div class="socials">
-                    <a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
-                    <a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://tiktok.com/" target="_blank"><i class="fab fa-tiktok"></i></a>
-                    <a href="https://youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
-                </div>
-                <p>
-                    <a href="mailto:support@sarkafx.com">support@sarkafx.com</a><br>
-                    <a href="mailto:info@sarkafx.com">info@sarkafx.com</a>
-                </p>
-            </div>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <span class="fs-3" style="color:#16c782;"><i class="fa-solid fa-chart-line"></i></span>
+        <span class="fw-bold fs-4" style="color:#0455b7; letter-spacing:-1px;">
+          Sarka <span style="color:#16c782;">Forex</span>
+        </span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="signals.html">Signals</a></li>
+          <li class="nav-item"><a class="nav-link" href="ai-tools.html">AI Tools</a></li>
+          <li class="nav-item"><a class="nav-link" href="testimonials.html">Testimonials</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="faqs.html">FAQs</a></li>
+          <li class="nav-item"><a class="nav-link" href="community.html">Community</a></li>
+          <li class="nav-item"><a class="nav-link btn btn-success text-white px-3 ms-lg-2 active" href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contact Hero -->
+  <section class="bg-light py-5">
+    <div class="container text-center">
+      <h1 class="display-5 fw-bold mb-3">Contact Sarka Forex</h1>
+      <p class="lead mb-4">
+        <b>24/7 support—WhatsApp, Telegram, email, or direct call.  
+        We reply in minutes, not days!</b>
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Options + Form -->
+  <section class="bg-white py-5">
+    <div class="container">
+      <div class="row g-5 align-items-start">
+        <!-- Contact Info -->
+        <div class="col-md-6">
+          <h3 class="fw-bold mb-3">Quick Links</h3>
+          <ul class="list-group list-group-flush mb-4">
+            <li class="list-group-item"><i class="fab fa-whatsapp text-success me-2"></i>
+              <a href="https://wa.me/2347082713306?text=Salam%2C%20I%20have%20a%20question%20for%20Sarka%20Forex" target="_blank">WhatsApp: +234 708 271 3306</a></li>
+            <li class="list-group-item"><i class="fab fa-telegram text-primary me-2"></i>
+              <a href="https://t.me/sarkaforex" target="_blank">Telegram: @sarkaforex</a></li>
+            <li class="list-group-item"><i class="fa fa-envelope text-danger me-2"></i>
+              <a href="mailto:info@sarkafx.com">Email: info@sarkafx.com</a></li>
+            <li class="list-group-item"><i class="fa fa-phone text-info me-2"></i>
+              <a href="tel:+2347082713306">Call: +234 708 271 3306</a></li>
+          </ul>
+          <h5 class="mb-2">Address:</h5>
+          <p class="mb-3">Abuja, Nigeria (Africa-wide & online)</p>
+          <h5 class="mb-2">Social:</h5>
+          <p>
+            <a href="https://www.instagram.com/sarka_fx?igsh=amx0aTVzejVucDJz&utm_source=qr" class="me-2" target="_blank"><i class="fab fa-instagram fa-lg"></i></a>
+            <a href="https://www.facebook.com/share/1EjUY3HbjZ/?mibextid=wwXIfr" class="me-2" target="_blank"><i class="fab fa-facebook fa-lg"></i></a>
+            <a href="https://www.tiktok.com/@sarkaforex?_t=ZM-8wfVvH62rY6&_r=1" class="me-2" target="_blank"><i class="fab fa-tiktok fa-lg"></i></a>
+            <a href="https://youtube.com/@sarka_fx?si=2kUioQjjykZ23oec" class="me-2" target="_blank"><i class="fab fa-youtube fa-lg"></i></a>
+          </p>
         </div>
-    </footer>
+        <!-- Contact Form -->
+        <div class="col-md-6">
+          <h3 class="fw-bold mb-3">Contact Form</h3>
+          <form action="mailto:info@sarkafx.com" method="POST" enctype="text/plain">
+            <div class="mb-3">
+              <label for="name" class="form-label">Your Name</label>
+              <input type="text" class="form-control" id="name" name="Name" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Your Email</label>
+              <input type="email" class="form-control" id="email" name="Email" required>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Your Message</label>
+              <textarea class="form-control" id="message" name="Message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-success fw-bold">Send Message</button>
+          </form>
+          <p class="small mt-3 text-secondary">Prefer faster reply? <a href="https://wa.me/2347082713306?text=Salam%2C%20I%20have%20a%20question%20for%20Sarka%20Forex" target="_blank" class="fw-bold text-success">WhatsApp us anytime</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-light pt-5 pb-3 mt-5">
+    <div class="container">
+      <div class="row align-items-center mb-4">
+        <div class="col-md-5 text-center text-md-start mb-3 mb-md-0">
+          <span class="fs-2" style="color:#16c782;"><i class="fa-solid fa-chart-line"></i></span>
+          <div class="fw-bold fs-5" style="color:#16c782;">Sarka Forex</div>
+          <small class="d-block mt-2">Proudly driven by Islamic values—fairness, trust, and halal opportunities for all.<br>Scaling Africa, open to everyone.</small>
+        </div>
+        <div class="col-md-4 text-center mb-3 mb-md-0">
+          <div class="mb-2">Follow us:</div>
+          <a href="https://www.instagram.com/sarka_fx?igsh=amx0aTVzejVucDJz&utm_source=qr" class="text-light fs-4 me-2" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/share/1EjUY3HbjZ/?mibextid=wwXIfr" class="text-light fs-4 me-2" target="_blank"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.tiktok.com/@sarkaforex?_t=ZM-8wfVvH62rY6&_r=1" class="text-light fs-4 me-2" target="_blank"><i class="fab fa-tiktok"></i></a>
+          <a href="https://youtube.com/@sarka_fx?si=2kUioQjjykZ23oec" class="text-light fs-4" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div class="col-md-3 text-center text-md-end">
+          <div class="mb-2">Contact:</div>
+          <a href="mailto:info@sarkafx.com" class="text-light d-block mb-1"><i class="fa fa-envelope me-2"></i>info@sarkafx.com</a>
+          <a href="tel:+2347082713306" class="text-light d-block"><i class="fa fa-phone me-2"></i>+234 708 271 3306</a>
+        </div>
+      </div>
+      <hr class="bg-secondary mb-3">
+      <div class="row">
+        <div class="col-12 text-center small">
+          &copy; 2025 Sarka Forex. All rights reserved. | Designed with <i class="fa fa-heart text-danger"></i> for Africa & the Muslim world.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/scripts.js"></script>
 </body>
 </html>
