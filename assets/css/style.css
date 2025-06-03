@@ -1,44 +1,24 @@
-/* assets/css/style.css */
-
-/* Make dark mode look nice */
 [data-bs-theme="dark"] {
-  background-color: #181d23 !important;
+  background-color: #1a222c !important;
   color: #e3e9ee !important;
 }
-[data-bs-theme="dark"] .bg-light {
-  background-color: #212529 !important;
+[data-bs-theme="dark"] .bg-light,
+[data-bs-theme="dark"] .bg-white,
+[data-bs-theme="dark"] .card,
+[data-bs-theme="dark"] .navbar {
+  background-color: #232c39 !important;
   color: #e3e9ee !important;
 }
-[data-bs-theme="dark"] .bg-white {
-  background-color: #181d23 !important;
+[data-bs-theme="dark"] .footer,
+[data-bs-theme="dark"] .list-group-item {
+  background-color: #1a222c !important;
   color: #e3e9ee !important;
 }
-[data-bs-theme="dark"] .navbar, 
-[data-bs-theme="dark"] .footer, 
-[data-bs-theme="dark"] .card {
-  background-color: #212529 !important;
-  color: #e3e9ee !important;
+[data-bs-theme="dark"] .btn,
+[data-bs-theme="dark"] .btn-success,
+[data-bs-theme="dark"] .btn-primary,
+[data-bs-theme="dark"] .btn-outline-success {
+  border-color: #16c782 !important;
 }
-[data-bs-theme="dark"] .card {
-  border-color: #333 !important;
-}
-
-a {
-  text-decoration: none;
-  transition: color 0.2s;
-}
-
-a:hover {
-  color: #16c782 !important;
-}
-
-.btn-success, .bg-success {
-  background-color: #16c782 !important;
-  border: none;
-}
-
-@media (max-width: 991px) {
-  .navbar .navbar-collapse {
-    background: #fff;
-  }
-}
+[data-bs-theme="dark"] a { color: #70ffe6; }
+[data-bs-theme="dark"] a:hover { color: #16c782 !important; }
