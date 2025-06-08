@@ -5,73 +5,88 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sarka Forex | #1 Africa AI Trading Company – Halal, Automated, Scalable</title>
   <meta name="description" content="Africa's leading AI-powered, Islamic trading platform. Get live AI signals, tools, and join a global halal trading community.">
+  <link rel="icon" href="data:,"> <!-- Blank favicon -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .funnel-popup {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      z-index: 9999;
+      justify-content: center;
+      align-items: center;
+      overflow-y: auto;
+    }
+    .funnel-content {
+      background-color: #111;
+      color: #f9f9f9;
+      max-width: 700px;
+      padding: 2rem;
+      border-radius: 10px;
+    }
+    .funnel-content h2 {
+      color: gold;
+    }
+    .step { border-left: 4px solid gold; background: #222; padding: 1rem; margin-top: 1rem; }
+    .funnel-close { position: absolute; top: 20px; right: 20px; font-size: 2rem; color: white; cursor: pointer; }
+    .countdown { font-size: 1.2rem; color: #ffc107; margin-top: 1rem; }
+  </style>
 </head>
 <body>
 
-<!-- Existing content (Hero, Features, Testimonials, etc.) goes here -->
+<!-- Existing Content Omitted for Brevity... Keep Your Homepage Content -->
 
-<!-- FTD Funnel Section -->
-<section class="bg-dark text-light py-5">
-  <div class="container">
-    <h2 class="text-warning fw-bold text-center mb-4">🚀 Get AI Signals – Start with Just $50</h2>
-    <p class="text-center mb-4">No experience needed. Join Africa’s halal AI forex revolution in 3 simple steps.</p>
-
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="p-3 bg-black rounded shadow">
-          <h4 class="text-success">✅ Step 1: Register</h4>
-          <p>Click the button to register with our trusted broker now.</p>
-          <a class="btn btn-warning w-100 fw-bold" target="_blank" href="https://one.exnesstrack.org/a/c_a2vbh7aee8">Register Now</a>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="p-3 bg-black rounded shadow">
-          <h4 class="text-success">✅ Step 2: Fund</h4>
-          <p>Deposit at least $50 to activate your AI signal access.</p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="p-3 bg-black rounded shadow">
-          <h4 class="text-success">✅ Step 3: Join Group</h4>
-          <p>Get added to our exclusive AI community & tools.</p>
-        </div>
-      </div>
+<!-- Funnel Section -->
+<div id="funnelPopup" class="funnel-popup d-flex">
+  <div class="funnel-content">
+    <span class="funnel-close" onclick="toggleFunnel(false)">&times;</span>
+    <h2>🚀 Join the Halal AI Forex Movement</h2>
+    <p><b>Only 17 slots left today. Countdown active. Don’t miss your spot!</b></p>
+    <div class="step">
+      <h5>✅ Step 1: Register</h5>
+      <p><a class="btn btn-warning w-100" href="https://one.exnesstrack.org/a/c_a2vbh7aee8" target="_blank">Click to Register ($50 min)</a></p>
     </div>
-
+    <div class="step">
+      <h5>✅ Step 2: Fund Account</h5>
+      <p>Deposit $50 or more to activate full access.</p>
+    </div>
+    <div class="step">
+      <h5>✅ Step 3: Join AI Group</h5>
+      <p>Get signals, support, mentorship, and daily updates.</p>
+    </div>
+    <div class="countdown">⏳ <b>Offer Ends In:</b> <span id="countdownTimer">05:00</span></div>
     <div class="text-center mt-4">
-      <a href="https://wa.me/2347035713435?text=Salam%20I%20just%20funded%20my%20account" target="_blank" class="btn btn-success btn-lg shadow">💬 Message Us on WhatsApp</a>
+      <a class="btn btn-success btn-lg w-100 mb-3" href="https://wa.me/2347035713435?text=FTD">Chat Support Now</a>
     </div>
-
-    <div class="mt-5 text-center">
-      <blockquote class="fst-italic text-muted">“Sarka Forex changed my life. I started with $50 and now earn daily.” <br> — Trader Musa 🇳🇬</blockquote>
-    </div>
-
-    <div class="mt-4">
-      <h5 class="text-warning">FAQs</h5>
-      <ul class="list-unstyled">
-        <li><strong>Is this halal?</strong> Yes, no riba. Fully Sharia-compliant.</li>
-        <li><strong>Can I grow from $50?</strong> Yes. AI + mentorship helps you scale smartly.</li>
-        <li><strong>Do I need experience?</strong> Not at all. Just follow 3 simple steps.</li>
-      </ul>
-    </div>
-
-    <div class="mt-5 text-center small text-secondary">
-      ✔ Trusted by traders in Nigeria, Ghana, Kenya & beyond <br>
-      ✔ Powered by AI (GPT Pro) <br>
-      ✔ Built on Islamic principles
-    </div>
+    <p class="small text-muted text-center">No riba. 100% ethical. Powered by GPT + Barakah.</p>
   </div>
-</section>
+</div>
 
-<!-- Footer -->
-<footer class="bg-black text-light text-center py-3">
-  <div class="container">
-    &copy; 2025 Sarka Forex – All Rights Reserved
-  </div>
-</footer>
+<!-- Funnel Button Script -->
+<script>
+  function toggleFunnel(show) {
+    document.getElementById('funnelPopup').style.display = show ? 'flex' : 'none';
+  }
+  document.getElementById('hero-cta').addEventListener('click', function(e) {
+    e.preventDefault();
+    toggleFunnel(true);
+  });
+  // Countdown Timer
+  let time = 300; // 5 minutes
+  const timerEl = document.getElementById('countdownTimer');
+  setInterval(() => {
+    if (time > 0) {
+      time--;
+      const minutes = String(Math.floor(time / 60)).padStart(2, '0');
+      const seconds = String(time % 60).padStart(2, '0');
+      timerEl.textContent = `${minutes}:${seconds}`;
+    }
+  }, 1000);
+</script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="assets/js/scripts.js"></script>
