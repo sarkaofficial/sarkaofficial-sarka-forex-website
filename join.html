@@ -49,6 +49,45 @@
     a.button:hover {
       background: #ffd700;
     }
+    .claim-access {
+      display: block;
+      margin: 2rem auto 1.5rem auto;
+      background-color: #16c782;
+      color: #111;
+      text-align: center;
+      padding: 1rem;
+      font-weight: bold;
+      border-radius: 8px;
+      width: 80%;
+      font-size: 1.14rem;
+      box-shadow: 0 2px 18px #16c7824d;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .claim-access:hover {
+      background: #119968;
+      color: #fff;
+    }
+    .home-link {
+      display: block;
+      margin: 2.5rem auto 1rem auto;
+      text-align: center;
+      color: #fff;
+      background: #0455b7;
+      font-size: 1.07rem;
+      padding: 0.9rem 0;
+      border-radius: 8px;
+      width: 85%;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-decoration: none;
+      transition: background 0.2s;
+      box-shadow: 0 2px 18px #0455b76e;
+    }
+    .home-link:hover {
+      background: #16c782;
+      color: #111;
+    }
     .offer-row {
       display: flex;
       align-items: center;
@@ -88,9 +127,20 @@
     }
     .trust {
       text-align: center;
-      font-size: 0.9rem;
+      font-size: 0.93rem;
       color: #aaa;
-      margin-top: 2rem;
+      margin-top: 2.5rem;
+      margin-bottom: 1.2rem;
+      background: #181818;
+      padding: 1.1rem 0.7rem 0.9rem 0.7rem;
+      border-radius: 10px;
+      border: 1px solid #222;
+      box-shadow: 0 2px 12px #0004;
+    }
+    .trust .trust-icons {
+      font-size: 1.2em;
+      margin-bottom: 0.3rem;
+      color: #f0e68c;
     }
     .whatsapp-option {
       margin-top: 2rem;
@@ -100,26 +150,27 @@
       color: gold;
       text-decoration: underline;
     }
-    .home-link {
-      display: block;
-      margin: 2.5rem auto 1rem auto;
-      text-align: center;
-      color: #fff;
-      background: #0455b7;
-      font-size: 1.07rem;
-      padding: 0.9rem 0;
-      border-radius: 8px;
-      width: 85%;
-      font-weight: 600;
-      letter-spacing: 0.5px;
-      text-decoration: none;
-      transition: background 0.2s;
-      box-shadow: 0 2px 18px #0455b76e;
+    .badges-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      justify-content: center;
+      margin-top: 1.7rem;
+      margin-bottom: 0.7rem;
     }
-    .home-link:hover {
+    .badge {
       background: #16c782;
-      color: #111;
+      color: #222;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.97rem;
+      padding: 7px 16px;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.2rem;
     }
+    .badge.global { background: #0455b7; color: #fff; }
+    .badge.islamic { background: gold; color: #000; }
+    .badge.secure { background: #e49c22; color: #fff; }
   </style>
 </head>
 <body>
@@ -143,6 +194,15 @@
     <!-- Home redirect button always visible -->
     <a href="index.html" class="home-link">← Back to Home Page (Explore Website)</a>
 
+    <div class="badges-row">
+      <span class="badge">Halal & Ethical</span>
+      <span class="badge global">Africa + Global</span>
+      <span class="badge islamic">No Riba</span>
+      <span class="badge secure">SECURED SYSTEM</span>
+      <span class="badge">24/7 Support</span>
+      <span class="badge">Fast Withdrawals</span>
+    </div>
+
     <p>You don’t need experience. Just follow 3 simple steps and join Africa’s first halal AI forex movement.</p>
 
     <div class="step">
@@ -157,8 +217,11 @@
     </div>
 
     <div class="step">
-      <h3>✅ Step 3: Join the Movement</h3>
-      <p>After funding, you’ll get added to our exclusive group + AI system.</p>
+      <h3>✅ Step 3: Claim Access</h3>
+      <p>Done? Click below and send us your Exness email to get full access to Sarka AI & our VIP group.</p>
+      <a class="claim-access" href="https://wa.me/2347082713306?text=Salam%2C%20I%20have%20funded%20my%20Exness%20account%20and%20want%20full%20access%20to%20Sarka%20AI.%20My%20email%20is%3A%20" target="_blank">
+        ✅ Claim Full Access on WhatsApp
+      </a>
     </div>
 
     <div class="quote">
@@ -171,16 +234,21 @@
       <p><strong>Q:</strong> Is this halal?<br>A: Yes. No riba. We use ethical brokers and clean systems.</p>
       <p><strong>Q:</strong> Can I grow from $50?<br>A: Absolutely. With smart risk, mentorship, and tools, it scales.</p>
       <p><strong>Q:</strong> Do I need forex experience?<br>A: No. Our AI + mentors help you from scratch.</p>
+      <p><strong>Q:</strong> How do I get support?<br>A: 24/7 support is available via WhatsApp <a href="https://wa.me/2347082713306?text=Salam%2C%20I%20need%20support%20with%20Sarka%20Forex" target="_blank" style="color: gold; text-decoration:underline;">here</a>.</p>
+      <p><strong>Q:</strong> Is my money safe?<br>A: Yes. We partner only with top global brokers. All funds stay in your own broker wallet—Sarka has no access to your capital.</p>
     </div>
 
     <div class="whatsapp-option">
-      <p>Need help? <a href="https://wa.me/2347035713435?text=TRADE" target="_blank">Chat with our support team on WhatsApp</a>.</p>
+      <p>Need help? <a href="https://wa.me/2347082713306?text=TRADE" target="_blank">Chat with our support team on WhatsApp</a>.</p>
     </div>
 
     <div class="trust">
-      ✔ Trusted by traders across Nigeria, Ghana, Kenya & beyond<br>
-      ✔ Powered by AI (GPT Pro)<br>
-      ✔ 100% Halal Forex Movement
+      <div class="trust-icons">🌍 🔒 🤝 🚀</div>
+      ✔ Trusted by traders in Nigeria, Ghana, Kenya, Egypt, UAE & beyond<br>
+      ✔ SECURED system: Your money is always in your broker, not Sarka<br>
+      ✔ Verified by community leaders, imams & fintech experts<br>
+      ✔ Real-time AI signals, fast withdrawals, 24/7 support<br>
+      ✔ 100% Halal, Transparent, and African-owned movement
     </div>
   </div>
 
