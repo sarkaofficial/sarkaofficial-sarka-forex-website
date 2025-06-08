@@ -5,90 +5,369 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sarka Forex | #1 Africa AI Trading Company – Halal, Automated, Scalable</title>
   <meta name="description" content="Africa's leading AI-powered, Islamic trading platform. Get live AI signals, tools, and join a global halal trading community.">
-  <link rel="icon" href="data:,"> <!-- Blank favicon -->
+  <link rel="icon" href="data:,"> <!-- Blank favicon to remove broken icon -->
+  <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
-  <style>
-    .funnel-popup {
-      display: none;
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background-color: rgba(0, 0, 0, 0.9);
-      z-index: 9999;
-      justify-content: center;
-      align-items: center;
-      overflow-y: auto;
-    }
-    .funnel-content {
-      background-color: #111;
-      color: #f9f9f9;
-      max-width: 700px;
-      padding: 2rem;
-      border-radius: 10px;
-    }
-    .funnel-content h2 {
-      color: gold;
-    }
-    .step { border-left: 4px solid gold; background: #222; padding: 1rem; margin-top: 1rem; }
-    .funnel-close { position: absolute; top: 20px; right: 20px; font-size: 2rem; color: white; cursor: pointer; }
-    .countdown { font-size: 1.2rem; color: #ffc107; margin-top: 1rem; }
-  </style>
 </head>
-<body>
+<body data-bs-theme="light">
 
-<!-- Existing Content Omitted for Brevity... Keep Your Homepage Content -->
-
-<!-- Funnel Section -->
-<div id="funnelPopup" class="funnel-popup d-flex">
-  <div class="funnel-content">
-    <span class="funnel-close" onclick="toggleFunnel(false)">&times;</span>
-    <h2>🚀 Join the Halal AI Forex Movement</h2>
-    <p><b>Only 17 slots left today. Countdown active. Don’t miss your spot!</b></p>
-    <div class="step">
-      <h5>✅ Step 1: Register</h5>
-      <p><a class="btn btn-warning w-100" href="https://one.exnesstrack.org/a/c_a2vbh7aee8" target="_blank">Click to Register ($50 min)</a></p>
+  <!-- Top Bar: Language/Dark Mode -->
+  <div class="bg-light py-1 border-bottom small">
+    <div class="container d-flex justify-content-end align-items-center gap-3">
+      <div id="lang-switch" class="me-2">
+        <button class="btn btn-sm btn-outline-success me-1" onclick="setLang('en')">EN</button>
+        <button class="btn btn-sm btn-outline-success me-1" onclick="setLang('ha')">HA</button>
+        <button class="btn btn-sm btn-outline-success" onclick="setLang('ar')">AR</button>
+      </div>
+      <div id="dark-toggle" class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" id="darkSwitch" onchange="toggleDark()">
+        <label class="form-check-label" for="darkSwitch"><i class="fa fa-moon"></i></label>
+      </div>
     </div>
-    <div class="step">
-      <h5>✅ Step 2: Fund Account</h5>
-      <p>Deposit $50 or more to activate full access.</p>
-    </div>
-    <div class="step">
-      <h5>✅ Step 3: Join AI Group</h5>
-      <p>Get signals, support, mentorship, and daily updates.</p>
-    </div>
-    <div class="countdown">⏳ <b>Offer Ends In:</b> <span id="countdownTimer">05:00</span></div>
-    <div class="text-center mt-4">
-      <a class="btn btn-success btn-lg w-100 mb-3" href="https://wa.me/2347035713435?text=FTD">Chat Support Now</a>
-    </div>
-    <p class="small text-muted text-center">No riba. 100% ethical. Powered by GPT + Barakah.</p>
   </div>
-</div>
 
-<!-- Funnel Button Script -->
-<script>
-  function toggleFunnel(show) {
-    document.getElementById('funnelPopup').style.display = show ? 'flex' : 'none';
-  }
-  document.getElementById('hero-cta').addEventListener('click', function(e) {
-    e.preventDefault();
-    toggleFunnel(true);
-  });
-  // Countdown Timer
-  let time = 300; // 5 minutes
-  const timerEl = document.getElementById('countdownTimer');
-  setInterval(() => {
-    if (time > 0) {
-      time--;
-      const minutes = String(Math.floor(time / 60)).padStart(2, '0');
-      const seconds = String(time % 60).padStart(2, '0');
-      timerEl.textContent = `${minutes}:${seconds}`;
-    }
-  }, 1000);
-</script>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <span class="fs-3" style="color:#16c782;"><i class="fa-solid fa-chart-line"></i></span>
+        <span class="fw-bold fs-4" style="color:#0455b7; letter-spacing:-1px;">
+          Sarka <span style="color:#16c782;">Forex</span>
+        </span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="signals.html">Signals</a></li>
+          <li class="nav-item"><a class="nav-link" href="ai-tools.html">AI Tools</a></li>
+          <li class="nav-item"><a class="nav-link" href="testimonials.html">Testimonials</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="faqs.html">FAQs</a></li>
+          <li class="nav-item"><a class="nav-link" href="community.html">Community</a></li>
+          <li class="nav-item"><a class="nav-link btn btn-success text-white px-3 ms-lg-2" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="assets/js/scripts.js"></script>
+  <!-- Hero Section -->
+  <section class="hero bg-light py-5 position-relative">
+    <div class="container">
+      <div class="row align-items-center flex-column-reverse flex-lg-row">
+        <div class="col-lg-6 text-center text-lg-start mt-4 mt-lg-0">
+          <h1 class="display-5 fw-bold mb-3" id="hero-headline">
+            #1 Africa AI Trading Company <br>
+            <span class="text-success">Halal. Automated. Scalable.</span>
+          </h1>
+          <p class="lead" id="hero-sub">
+            Unlock <b>AI-powered Forex signals, automation, and ethical trading</b>—built for the Muslim world, but open to all. Join Sarka Forex and start your journey to financial freedom, the halal way.
+          </p>
+          <div class="d-flex flex-wrap gap-3 mt-4 justify-content-center justify-content-lg-start">
+            <a href="https://wa.me/2347082713306?text=Salam%2C%20I%20want%20AI%20Signals%20from%20Sarka%20Forex" target="_blank" class="btn btn-lg btn-success px-4 py-2 fw-bold shadow" id="hero-cta">
+              <i class="fa fa-bolt me-2"></i>Get AI Signals Free
+            </a>
+            <a href="#community" class="btn btn-lg btn-outline-primary px-4 py-2 fw-bold shadow-sm">Join Community</a>
+          </div>
+          <div class="d-flex mt-4 gap-2 flex-wrap align-items-center">
+            <span class="badge bg-success">Halal & Ethical</span>
+            <span class="badge bg-primary">AI-Powered</span>
+            <span class="badge bg-info text-dark">Africa & Global</span>
+          </div>
+        </div>
+        <div class="col-lg-6 text-center">
+          <div style="font-size:6em;color:#16c782;line-height:0.8;"><i class="fa-solid fa-robot"></i></div>
+          <div class="text-muted fw-bold mt-2">AI Trading Power</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Live Counters -->
+  <section class="bg-white py-4 border-bottom">
+    <div class="container text-center">
+      <div class="row g-4">
+        <div class="col-6 col-md-3">
+          <h2 class="counter text-success" data-count="17500">0</h2>
+          <div class="small text-secondary">Active Users</div>
+        </div>
+        <div class="col-6 col-md-3">
+          <h2 class="counter text-primary" data-count="249000">0</h2>
+          <div class="small text-secondary">Signals Sent</div>
+        </div>
+        <div class="col-6 col-md-3">
+          <h2 class="counter text-info" data-count="62">0</h2>
+          <div class="small text-secondary">Countries Reached</div>
+        </div>
+        <div class="col-6 col-md-3">
+          <h2 class="counter text-warning" data-count="98">0</h2>
+          <div class="small text-secondary">AI Tools</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Islamic & AI Section -->
+  <section class="bg-light py-5">
+    <div class="container text-center text-lg-start">
+      <div class="row align-items-center">
+        <div class="col-lg-7">
+          <h2 class="fw-bold mb-3"><i class="fa-solid fa-mosque text-success me-2"></i> Halal. Ethical. AI-Driven.</h2>
+          <p class="fs-5 mb-3">
+            Sarka Forex is the first African AI trading platform built on <b>Islamic values</b>: trust, fairness, and financial empowerment for all. No riba. No shady practices. <b>Real results, real community, real legacy</b>.
+          </p>
+          <ul class="list-unstyled fs-5">
+            <li><i class="fa fa-check-circle text-success me-2"></i>Sharia-compliant signals & prop trading</li>
+            <li><i class="fa fa-check-circle text-success me-2"></i>24/7 support in English, Hausa & Arabic</li>
+            <li><i class="fa fa-check-circle text-success me-2"></i>Open to all—Muslim's, or anyone</li>
+            <li><i class="fa fa-check-circle text-success me-2"></i>AI & automation at every level</li>
+          </ul>
+        </div>
+        <div class="col-lg-5 text-center">
+          <div style="font-size:5em;color:#0455b7;"><i class="fa-solid fa-globe"></i></div>
+          <div class="text-muted fw-bold mt-2">Global Halal Finance</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Live AI Signals Demo -->
+  <section class="bg-white py-5">
+    <div class="container">
+      <h2 class="fw-bold mb-4 text-center">Live AI Signals (Demo)</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title text-success">EURUSD Buy</h5>
+              <p class="card-text mb-1"><b>Entry:</b> 1.0802</p>
+              <p class="card-text mb-1"><b>TP:</b> 1.0865 | <b>SL:</b> 1.0777</p>
+              <span class="badge bg-success">AI Verified</span>
+              <div class="mt-2"><small class="text-muted">Sent 3 min ago</small></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title text-primary">XAUUSD Sell</h5>
+              <p class="card-text mb-1"><b>Entry:</b> 2365.00</p>
+              <p class="card-text mb-1"><b>TP:</b> 2350.50 | <b>SL:</b> 2370.00</p>
+              <span class="badge bg-primary">AI Live</span>
+              <div class="mt-2"><small class="text-muted">Sent 1 min ago</small></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title text-warning">GBPUSD Buy</h5>
+              <p class="card-text mb-1"><b>Entry:</b> 1.2647</p>
+              <p class="card-text mb-1"><b>TP:</b> 1.2722 | <b>SL:</b> 1.2610</p>
+              <span class="badge bg-warning text-dark">Sharia Mode</span>
+              <div class="mt-2"><small class="text-muted">Sent 6 min ago</small></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        <a href="https://wa.me/2347082713306?text=I%20want%20Sarka%20AI%20Signals" target="_blank" class="btn btn-lg btn-success px-4 shadow"><i class="fa fa-bolt me-2"></i>Get More Signals Free</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products / Brokers / Courses -->
+  <section class="bg-light py-5">
+    <div class="container">
+      <h2 class="fw-bold mb-4 text-center">Our Products & Partners</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title"><i class="fa fa-graduation-cap text-primary me-2"></i>Masterclass Courses</h5>
+              <p class="card-text">Learn AI, Forex, and Halal finance with expert-led online classes. English, Hausa, Arabic.</p>
+              <a href="courses.html" class="btn btn-outline-primary btn-sm">See Courses</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title"><i class="fa fa-robot text-success me-2"></i>AI Tools & Automation</h5>
+              <p class="card-text">Trade with bots, auto-signals, and risk management tools. Easy for beginners, powerful for pros.</p>
+              <a href="ai-tools.html" class="btn btn-outline-success btn-sm">Try AI Tools</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title"><i class="fa fa-building-columns text-warning me-2"></i>Best Brokers & Prop Firms</h5>
+              <p class="card-text">Partnered with top halal brokers, trusted prop firms, and exclusive Sarka deals for Africa and the world.</p>
+              <a href="brokers.html" class="btn btn-outline-warning btn-sm">See Brokers</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Popup (hidden at first) -->
+  <div id="newsletter-popup" class="newsletter-popup">
+    <div class="popup-content shadow-lg bg-white rounded">
+      <button class="btn-close float-end" onclick="closeNewsletter()"></button>
+      <h4 class="fw-bold mb-2">Join the Sarka Forex Newsletter</h4>
+      <p>Get exclusive signals, market tips, and offers in your inbox (no spam, halal only!).</p>
+      <form onsubmit="event.preventDefault();subscribeNewsletter();">
+        <input type="email" class="form-control mb-2" placeholder="Enter your email" required>
+        <button type="submit" class="btn btn-success w-100"><i class="fa fa-envelope me-1"></i>Subscribe</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Testimonials -->
+  <section class="bg-white py-5">
+    <div class="container">
+      <h2 class="fw-bold mb-4 text-center">What Our Traders Say</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm h-100">
+            <div class="card-body">
+              <p class="card-text fst-italic">“Alhamdulillah! Finally, a halal trading platform I trust. Signals are real, and the community is supportive.”</p>
+              <div class="d-flex align-items-center mt-3">
+                <i class="fa fa-user-circle fa-2x text-success me-2"></i>
+                <div>
+                  <b>Ahmed, Nigeria</b><br>
+                  <span class="small text-secondary">AI Signals User</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm h-100">
+            <div class="card-body">
+              <p class="card-text fst-italic">“The AI tools are so easy—even for a beginner! My FTD was doubled within my first month.”</p>
+              <div class="d-flex align-items-center mt-3">
+                <i class="fa fa-user-circle fa-2x text-primary me-2"></i>
+                <div>
+                  <b>Fatima, Ghana</b><br>
+                  <span class="small text-secondary">AI Bot Trader</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm h-100">
+            <div class="card-body">
+              <p class="card-text fst-italic">“Sarka Forex is more than signals—it’s family, support, and real financial hope for Africa.”</p>
+              <div class="d-flex align-items-center mt-3">
+                <i class="fa fa-user-circle fa-2x text-warning me-2"></i>
+                <div>
+                  <b>Khalid, Egypt</b><br>
+                  <span class="small text-secondary">Prop Firm Winner</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog/News (curated, OG style) -->
+  <section class="bg-light py-5">
+    <div class="container">
+      <h2 class="fw-bold mb-4 text-center">Latest From Sarka News & Blog</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">Halal Trading in Africa: The Sarka Vision</h5>
+              <p class="card-text">Why the next forex revolution is 100% halal, transparent, and driven by African youth. Our journey and future...</p>
+              <a href="blog.html" class="btn btn-sm btn-success">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">How AI Is Changing the Forex Game</h5>
+              <p class="card-text">Discover how Sarka’s AI beats the market—making trading smarter, faster, and open to everyone.</p>
+              <a href="blog.html" class="btn btn-sm btn-primary">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">Sarka Prop Firms: From Zero to Funded</h5>
+              <p class="card-text">See how traders across Africa are passing prop firm challenges and earning real income the halal way.</p>
+              <a href="blog.html" class="btn btn-sm btn-warning text-white">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Community / WhatsApp onboarding -->
+  <section class="bg-white py-5" id="community">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-3">Join the Sarka Community</h2>
+      <p class="lead mb-4">Exclusive WhatsApp & Telegram groups, live market chat, and 24/7 AI support. <br>
+      100% halal, no spam, just value for every trader!</p>
+      <div class="d-flex flex-wrap justify-content-center gap-3">
+        <a href="https://wa.me/2347082713306?text=Salam%2C%20I%20want%20to%20join%20Sarka%20Community" class="btn btn-lg btn-success px-4 shadow"><i class="fab fa-whatsapp me-2"></i>Join WhatsApp</a>
+        <a href="https://t.me/" class="btn btn-lg btn-outline-primary px-4 shadow"><i class="fab fa-telegram me-2"></i>Join Telegram</a>
+        <a href="contact.html" class="btn btn-lg btn-outline-secondary px-4 shadow"><i class="fa fa-envelope me-2"></i>Contact Team</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Socials & Footer -->
+  <footer class="bg-dark text-light pt-5 pb-3 mt-5">
+    <div class="container">
+      <div class="row align-items-center mb-4">
+        <div class="col-md-5 text-center text-md-start mb-3 mb-md-0">
+          <span class="fs-2" style="color:#16c782;"><i class="fa-solid fa-chart-line"></i></span>
+          <div class="fw-bold fs-5" style="color:#16c782;">Sarka Forex</div>
+          <small class="d-block mt-2">Proudly driven by Islamic values—fairness, trust, and halal opportunities for all.<br>Scaling Africa, open to everyone.</small>
+        </div>
+        <div class="col-md-4 text-center mb-3 mb-md-0">
+          <div class="mb-2">Follow us:</div>
+          <a href="https://www.instagram.com/sarka_fx?igsh=amx0aTVzejVucDJz&utm_source=qr" class="text-light fs-4 me-2" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/share/1EjUY3HbjZ/?mibextid=wwXIfr" class="text-light fs-4 me-2" target="_blank"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.tiktok.com/@sarkaforex?_t=ZM-8wfVvH62rY6&_r=1" class="text-light fs-4 me-2" target="_blank"><i class="fab fa-tiktok"></i></a>
+          <a href="https://youtube.com/@sarka_fx?si=2kUioQjjykZ23oec" class="text-light fs-4" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div class="col-md-3 text-center text-md-end">
+          <div class="mb-2">Contact:</div>
+          <a href="mailto:info@sarkafx.com" class="text-light d-block mb-1"><i class="fa fa-envelope me-2"></i>info@sarkafx.com</a>
+          <a href="tel:+2347082713306" class="text-light d-block"><i class="fa fa-phone me-2"></i>+234 708 271 3306</a>
+        </div>
+      </div>
+      <hr class="bg-secondary mb-3">
+      <div class="row">
+        <div class="col-12 text-center small">
+          &copy; 2025 Sarka Forex. All rights reserved. | Designed with <i class="fa fa-heart text-danger"></i> for Africa & the Muslim world.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom Scripts -->
+  <script src="assets/js/scripts.js"></script>
 </body>
 </html>
