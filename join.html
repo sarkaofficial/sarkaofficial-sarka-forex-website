@@ -4,6 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Join Sarka Forex – Halal AI Trading</title>
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1210024170614103');
+  fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1210024170614103&ev=PageView&noscript=1"/>
+  </noscript>
+  <!-- End Meta Pixel Code -->
   <style>
     body {
       margin: 0;
@@ -209,7 +227,7 @@
       <h3>✅ Step 1: Click to Begin</h3>
       <p>Tap the button below to register with our trusted broker.</p>
     </div>
-    <a class="button" href="https://one.exnesstrack.org/a/c_lzphxg370u" target="_blank">Register Now with $50</a>
+    <a class="button" id="registerBtn" href="https://one.exnesstrack.org/a/c_lzphxg370u" target="_blank">Register Now with $50</a>
 
     <div class="step">
       <h3>✅ Step 2: Fund Your Account</h3>
@@ -270,6 +288,19 @@
     }
     updateCountdown();
     setInterval(updateCountdown, 1000);
+  </script>
+  <!-- Facebook Pixel Register Event Tracking -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var registerBtn = document.getElementById('registerBtn');
+      if (registerBtn) {
+        registerBtn.addEventListener('click', function () {
+          if (typeof fbq === "function") {
+            fbq('track', 'CompleteRegistration');
+          }
+        });
+      }
+    });
   </script>
 </body>
 </html>
